@@ -1,0 +1,10 @@
+package com.sample
+ 
+import com.sample.DroolsTest.Message;
+global String topicLevel
+rule "Drools Introduction"
+when
+$droolsIntro : DroolsIntroduction( topic == "Drools" )
+then
+System.out.println($droolsIntro.introduceYourself() + ", topic level is " + topicLevel);
+end
